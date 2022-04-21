@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("https://raw.githubusercontent.com/denvolk/frontend/blob/master/Gilroy-Medium.ttf");
+  src: local("Gilroy Medium"), local("Gilroy-Medium"),
+  url("https://raw.githubusercontent.com/denvolk/frontend/blob/master/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url("https://raw.githubusercontent.com/denvolk/frontend/blob/master/Gilroy-Bold.ttf");
+  src: local("Gilroy Bold"), local("Gilroy-Bold"),
+  url("https://raw.githubusercontent.com/denvolk/frontend/blob/master/Gilroy-Medium.ttf") format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
