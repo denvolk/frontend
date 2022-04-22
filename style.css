@@ -23,6 +23,7 @@
   font-size: 12px;
   background: #ffffff;
   max-width: 1445px;
+  margin: 0;
 }
 
 .wrapper  {
@@ -36,7 +37,6 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid #f00;
 }
 
 .header {
@@ -47,7 +47,6 @@
   display: flex;
   justify-content: space-between;
   padding: 0;
-  border: 1px solid #f00;
   margin-top: 32px;
   margin-bottom: 32px;
 }
@@ -55,7 +54,6 @@
 .header > ul > li{
   font-size: 18px;
   display: flex;
-  border: 1px solid #f00;
 }
 
 .header > ul > li > a{
@@ -85,7 +83,6 @@
   display: flex;
   justify-content: space-between;
   margin-top: 32px;
-  border: 1px solid #f00;
 }
 
 .name {
@@ -93,35 +90,89 @@
   font-size: 47px;
   margin-right: 100px;
   margin-left: -39px;
-  border: 1px solid #f00;
 }
 
 .info {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-style: normal;
   text-align: left;
   font-size: 18px;
-  margin-left: 195px;
-  margin-top: 60px;
-  margin-right: -225px;
-  border: 1px solid #f00;
+  margin-left: 200px;
+  margin-top: 64px;
+  margin-right: -240px;
 }
 
 .lang-selector  {
+  font-size: 16px;
+  line-height: 19px;
   display: flex;
   align-self: flex-end;
   text-align: left;
   transform: rotate(-90deg);
   margin-left: 564px;
   margin-right: -25px;
-  margin-bottom: 35px;
-  border: 1px solid #f00;
+  margin-bottom: 30px;
+  text-decoration-line: none;
+}
+
+.lang-selector > a  {
+  color: #828282;
+  text-decoration-line: none;
+}
+
+.lang-selector > a:hover  {
+  color: #070707;
+}
+
+.photo  {
+  margin-top: 33px;
+  margin-bottom: 100px;
 }
 
 .about  {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  width: 99.5vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   background: #F6F6F6;
+  padding-top: 99px;
+  padding-bottom: 87px;
+}
+
+.p1  {
+  margin-top: -10px;
+  font-size: 18px;
+}
+.p2  {
+  margin-top: 40px;
+  font-size: 18px;
+}
+.p3 {
+  margin-top: 40px;
+  font-size: 18px;
 }
 
 .skills {
-
+  margin-top: 90px;
+}
+.skills > h1  {
+  font-size: 34px;
+  line-height: 42px;
+  margin-top: 69px;
+}
+.skills > p{
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 21px;
+  margin-top: 69px;
 }
 
 .programs-pics  {
@@ -129,36 +180,159 @@
   justify-content: space-around;
   margin-left: -30px;
   margin-right: -30px;
+  margin-top: 90px;
 }
 
 .programs-name  {
   display: flex;
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 8px;
+  color: #828282;
 }
 
 .PS {
-  border: 1px solid #f00;
   margin-left: 65px;
 }
 
 .AI {
-  border: 1px solid #f00;
   margin-left: 192px;
 }
 
 .AAE  {
-  border: 1px solid #f00;
   margin-left: 184px;
 }
 
 .Figma  {
-  border: 1px solid #f00;
-  margin-left: 180px;
+  margin-left: 182px;
 }
 
 .rating {
   display: flex;
+  margin-top: 24px;
+}
+.ps-rating  {
+  margin-left: 37px;
+}
+.ai-rating  {
+  margin-left: 133px;
+}
+.aae-rating {
+  margin-left: 133px;
+}
+.figma-rating {
+  margin-left: 117px;
 }
 
 .portfolio  {
+  width: 99.5vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   background: #F6F6F6;
+  margin-top: 110px;
+  padding-top: 82px;
+  padding-bottom: 100px;
+}
+.portfolio > h1 {
+  margin-bottom: 64px;
+}
+.portfolio > img  {
+  margin-left: auto;
+  margin-right: auto;
+}
+.portfolio > a{
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #070707;
+}
+.portf1  {
+  margin-bottom: 40px;
+}
+.portf2 {
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+.portf3 {
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+.footer {
+  margin-top: 114px;
+  padding-bottom: 123px;
+}
+
+.contacts {
+
+}
+.contacts > h1  {
+  font-size: 34px;
+  line-height: 42px;
+  margin-bottom: 32px;
+}
+.chat {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 35px;
+}
+.footer-info  {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@keyframes expand {
+  from {transform: scale(1, 1);}
+  to  {transform: scale(1.1, 1.1);}
+}
+
+.contact-pics  {
+  margin-top: 82px;
+  margin-bottom: 41px;
+}
+.contact-pics > a {
+  margin-left: 28px;
+  margin-right: 28px;
+}
+.contact-pics > a > img:hover {
+  animation-name: expand;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes change-color {
+  from  {background-color: #070707;}
+  to  {background-color: #828282;}
+}
+
+.contacts > button  {
+  background-color: #070707;
+  font-size: 18px;
+  line-height: 22px;
+  height: 42px;
+  width: 180px;
+  text-align: center;
+  border: none;
+  color: #ffffff;
+  border-radius: 20px;
+}
+.contacts > button:hover  {
+  animation-name: change-color;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
 }
