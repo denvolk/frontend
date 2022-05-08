@@ -46,6 +46,10 @@ body  {
   font-weight: bold;
   font-style: normal;
   max-height: 88px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #ffffff;
 }
 
 .menu {
@@ -53,6 +57,8 @@ body  {
   margin-right: auto;
   margin-left: auto;
   padding-top: 10px;
+  background-color: white;
+  padding-bottom: 8px;
 }
 
 .menu > ul {
@@ -104,6 +110,8 @@ body  {
 .name {
   text-align: left;
   font-size: 47px;
+  display: flex;
+  flex-direction: column;
 }
 .info {
   font-family: "Gilroy", sans-serif;
@@ -113,6 +121,8 @@ body  {
   font-size: 18px;
   margin-top: 64px;
   margin-right: -520px;
+  display: flex;
+  flex-direction: column;
 }
 .lang-selector  {
   font-size: 16px;
@@ -148,19 +158,26 @@ body  {
   padding-top: 99px;
   padding-bottom: 87px;
   text-align: center;
+  min-height: 338px;
 }
-.about > h1 {
+.about h1 {
   font-size: 34px;
   line-height: 42px;
 }
-.about > p{
+.about p{
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 18px;
   line-height: 22px;
+  display: flex;
+  flex-direction: column;
+  margin-top: -10px;
 }
-.p1  {
+#span-about-p2-first, #span-about-p3-first {
+  margin-top: 40px;
+}
+/*.p1  {
   margin-top: -10px;
 }
 .p2  {
@@ -168,7 +185,7 @@ body  {
 }
 .p3 {
   margin-top: 40px;
-}
+}*/
 
 .skills {
   font-family: "Gilroy", sans-serif;
@@ -185,7 +202,8 @@ body  {
   line-height: 42px;
   margin-top: 69px;
 }
-.skills > p{
+/*.skills > p*/
+#span-skills-p  {
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -307,8 +325,10 @@ body  {
   font-size: 18px;
   line-height: 21px;
   margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
 }
-.footer-info  {
+#span-footer-first, #span-footer-second  {
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -342,7 +362,8 @@ body  {
   to  {background-color: #828282;}
 }
 
-.contacts > button  {
+.contacts > a  {
+  text-decoration-line: none;
   background-color: #070707;
   font-size: 18px;
   line-height: 22px;
@@ -352,8 +373,9 @@ body  {
   border: none;
   color: #ffffff;
   border-radius: 20px;
+  padding: 10px 20px 10px 20px;
 }
-.contacts > button:hover  {
+.contacts > a:hover  {
   animation-name: change-color;
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
