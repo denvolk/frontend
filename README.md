@@ -1,2 +1,2 @@
 # frontend
-Верстка сайта HTML/CSS
+Верстка сайта HTML/CSS/JS
