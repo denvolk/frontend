@@ -151,6 +151,9 @@ body  {
   padding-bottom: 100px;
   max-width: 945px;
 }
+.photo > img  {
+  max-width: 100%;
+}
 
 .about  {
   font-family: "Gilroy", sans-serif;
@@ -290,6 +293,7 @@ body  {
 }
 .img-container > img  {
   padding-bottom: 45px;
+  max-width: 100%;
 }
 .img-container > a  {
   font-family: "Gilroy", sans-serif;
@@ -306,12 +310,12 @@ body  {
   margin: 0;
   padding-bottom: 64px;
 }
-.portfolio > img  {
+/*.portfolio > img  {
   margin-left: auto;
   margin-right: auto;
   max-width: 945px;
   padding-bottom: 45px;
-}
+}*/
 
 .footer {
   padding-top: 114px;
