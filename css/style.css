@@ -56,9 +56,9 @@ body  {
   max-width: 945px;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 10px;
+  padding-top: 17px;
   background-color: white;
-  padding-bottom: 8px;
+  padding-bottom: 16px;
 }
 
 .menu > ul {
@@ -81,16 +81,15 @@ body  {
 }
 
 .hr-line  {
-  max-width: 945px;
-  margin-right: auto;
-  margin-left: auto;
+  max-width: 940px;
+  margin: 0 auto 0 auto;
 }
 
 .main {
   font-family: "Gilroy", sans-serif;
   font-weight: bold;
   font-style: normal;
-  margin-top: 12px;
+  padding-top: 12px;
 }
 
 .info-panel {
@@ -110,6 +109,7 @@ body  {
 .name {
   text-align: left;
   font-size: 47px;
+  line-height: 58px;
   display: flex;
   flex-direction: column;
 }
@@ -119,6 +119,7 @@ body  {
   font-style: normal;
   text-align: left;
   font-size: 18px;
+  line-height: 22px;
   margin-top: 64px;
   margin-right: -520px;
   display: flex;
@@ -126,7 +127,7 @@ body  {
 }
 .lang-selector  {
   font-size: 16px;
-  line-height: 19px;
+  line-height: 20px;
   display: flex;
   align-self: flex-end;
   text-align: left;
@@ -145,7 +146,9 @@ body  {
 }
 
 .photo  {
-  margin: 33px auto 100px auto;
+  margin: 0 auto 0 auto;
+  padding-top: 30px;
+  padding-bottom: 100px;
   max-width: 945px;
 }
 
@@ -155,14 +158,16 @@ body  {
   font-style: normal;
   width: 100%;
   background: #F6F6F6;
-  padding-top: 99px;
-  padding-bottom: 87px;
+  padding-top: 120px;
+  padding-bottom: 78px;
   text-align: center;
   min-height: 338px;
 }
 .about h1 {
   font-size: 34px;
   line-height: 42px;
+  padding-bottom: 35px;
+  margin: 0;
 }
 .about p{
   font-family: "Gilroy", sans-serif;
@@ -172,10 +177,16 @@ body  {
   line-height: 22px;
   display: flex;
   flex-direction: column;
-  margin-top: -10px;
+  margin: 0;
+}
+#span-about-p1-second {
+  padding-bottom: 45px;
+}
+#span-about-p2-second   {
+  padding-bottom: 48px;
 }
 #span-about-p2-first, #span-about-p3-first {
-  margin-top: 40px;
+  margin: 0;
 }
 /*.p1  {
   margin-top: -10px;
@@ -191,16 +202,18 @@ body  {
   font-family: "Gilroy", sans-serif;
   font-weight: bold;
   font-style: normal;
-  padding-top: 21px;
   margin-right: auto;
   margin-left: auto;
   max-width: 945px;
   text-align: center;
+  padding-top: 84px;
+  padding-bottom: 110px;
 }
 .skills > h1  {
+  margin: 0;
   font-size: 34px;
   line-height: 42px;
-  margin-top: 69px;
+  padding-bottom: 69px;
 }
 /*.skills > p*/
 #span-skills-p  {
@@ -209,24 +222,25 @@ body  {
   font-style: normal;
   font-size: 18px;
   line-height: 21px;
-  margin-top: 69px;
 }
 .programs-pics  {
   display: flex;
   justify-content: space-around;
   margin-left: -30px;
   margin-right: -30px;
-  margin-top: 90px;
+  padding-top: 88px;
+  padding-bottom: 22px;
 }
 .programs-name  {
   font-size: 14px;
   line-height: 17px;
-  margin-top: 8px;
   color: #828282;
+  padding-bottom: 40px;
 }
 .programs-name > ul{
   display: flex;
   padding: 0;
+  margin: 0;
 }
 .programs-name > ul > li  {
   display: flex;
@@ -245,7 +259,6 @@ body  {
 }
 .rating {
   display: flex;
-  margin-top: 24px;
 }
 .ps-rating  {
   margin-left: 37px;
@@ -266,46 +279,46 @@ body  {
   margin-right: auto;
   text-align: center;
   background: #F6F6F6;
-  margin-top: 110px;
-  padding-top: 82px;
-  padding-bottom: 100px;
+  padding-top: 113px;
 }
-.portfolio > h1 {
-  font-size: 34px;
-  line-height: 42px;
-  margin-bottom: 64px;
-}
-.portfolio > img  {
+.img-container  {
+  display: flex;
+  flex-direction: column;
+  max-width: 934px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 945px;
 }
-.portfolio > a{
+.img-container > img  {
+  padding-bottom: 45px;
+}
+.img-container > a  {
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 18px;
   line-height: 21px;
   color: #070707;
+  padding-bottom: 100px;
 }
-.portf-pic1  {
-  margin-bottom: 40px;
+.portfolio > h1 {
+  font-size: 34px;
+  line-height: 42px;
+  margin: 0;
+  padding-bottom: 64px;
 }
-.portf-pic2 {
-  margin-top: 100px;
-  margin-bottom: 40px;
-}
-.portf-pic3 {
-  margin-top: 100px;
-  margin-bottom: 40px;
+.portfolio > img  {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 945px;
+  padding-bottom: 45px;
 }
 
 .footer {
+  padding-top: 114px;
   font-family: "Gilroy", sans-serif;
   font-weight: bold;
   font-style: normal;
-  margin-top: 114px;
-  padding-bottom: 123px;
+  padding-bottom: 77px;
   text-align: center;
 }
 .contacts {
@@ -316,7 +329,8 @@ body  {
 .contacts > h1  {
   font-size: 34px;
   line-height: 42px;
-  margin-bottom: 32px;
+  margin: 0;
+  padding-bottom: 33px;
 }
 .contacts > p {
   font-family: "Gilroy", sans-serif;
@@ -324,9 +338,10 @@ body  {
   font-style: normal;
   font-size: 18px;
   line-height: 21px;
-  margin-bottom: 35px;
   display: flex;
   flex-direction: column;
+  margin: 0 0 11px 0;
+  padding-bottom: 35px;
 }
 #span-footer-first, #span-footer-second  {
   font-family: "Gilroy", sans-serif;
@@ -342,8 +357,8 @@ body  {
 }
 
 .contact-pics  {
-  margin-top: 82px;
-  margin-bottom: 41px;
+  margin-top: 94px;
+  margin-bottom: 45px;
 }
 .contact-pics > a {
   margin-left: 28px;
