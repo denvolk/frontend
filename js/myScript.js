@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function changeColorAndHash(){
     document.location.hash = "#eng";
 });
 
-//fetch("https://raw.githubusercontent.com/denvolk/frontend/test-branch/json/text.json")    //Для GitHub Pages
-fetch("http://localhost:63342/frontend/json/text.json")   //Для локального использования
+fetch("https://raw.githubusercontent.com/denvolk/frontend/test-branch/json/text.json")    //Для GitHub Pages
+//fetch("http://localhost:63342/frontend/json/text.json")   //Для локального использования
     .then(response => response.json())
     .then(data => text = data);
 
