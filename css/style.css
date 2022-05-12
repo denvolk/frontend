@@ -237,8 +237,13 @@ body  {
 .programs > .PS, .AI, .AAE, .Figma  {
   width: 164px;
 }
-.programs > .img-container > img {
-  width: 90px;
+.programs .img-container > img {
+  height: 90px;
+  -webkit-filter: grayscale(0);
+  transition: filter 0.5s ease-in-out;
+}
+.programs .img-container > img:hover {
+  -webkit-filter: grayscale(100);
 }
 .program-name {
   display: flex;
