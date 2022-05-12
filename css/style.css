@@ -417,3 +417,64 @@ body  {
   animation-direction: normal;
   animation-fill-mode: forwards;
 }
+
+.slider {
+  position: relative;
+  max-width: 938px;
+  max-height: 510px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slider:hover > input {
+  opacity: 1;
+}
+input {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 2px;
+  background-clip: content-box;
+  background-color: white;
+  border: 2px solid #828282;
+  transition: 0.2s all ease-in-out;
+  opacity: 0;
+}
+input:hover {
+  background-color: #828282;
+}
+input:checked {
+  background-color: #070707;
+}
+.slider-pic  {
+  width: 937px;
+  height: 510px;
+  background-image: url("../pics/Portfolio1.png");
+}
+#radio-1  {
+  position: absolute;
+  top: 197.5px;
+  left: 890px;
+}
+#radio-2  {
+  position: absolute;
+  top: 237px;
+  left: 890px;
+}
+#radio-3  {
+  position: absolute;
+  bottom: 200.5px;
+  left: 890px;
+}
+#radio-1:checked ~ .slider-pic {
+  background-image: url("../pics/Portfolio1.png");
+  transition: 0.5s ease-in;
+}
+#radio-2:checked ~ .slider-pic {
+  background-image: url("../pics/Portfolio1-2.png");
+  transition: 0.5s ease-in;
+}
+#radio-3:checked ~ .slider-pic {
+  background-image: url("../pics/Portfolio1-3.png");
+  transition: 0.5s ease-in;
+}
