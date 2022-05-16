@@ -396,6 +396,12 @@ body  {
   display: flex;
   justify-content: space-between;
 }
+.contact-pics img {
+  transition: 0.5s ease-in-out;
+}
+.contact-pics img:hover {
+  transform: scale(1.1);
+}
 
 @keyframes change-color {
   from  {background-color: #070707;}
