@@ -1,31 +1,35 @@
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Bold.eot");
-  src: url("/fonts/Gilroy-Bold.woff") format("woff"),
-  url("/fonts/Gilroy-Bold.ttf") format("truetype");
+  /*src: url("/fonts/Gilroy-Bold.eot");*/
+  src: url("../fonts/Gilroy-Bold.woff") format("woff");
+  /*url("/fonts/Gilroy-Bold.ttf") format("truetype");*/
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Medium.eot");
-  src: url("/fonts/Gilroy-Medium.woff") format("woff"),
-  url("/fonts/Gilroy-Medium.ttf") format("truetype");
+  /*src: url("/fonts/Gilroy-Medium.eot");*/
+  src: url("../fonts/Gilroy-Medium.woff") format("woff");
+  /*url("/fonts/Gilroy-Medium.ttf") format("truetype");*/
   font-weight: 500;
   font-style: normal;
 }
 
+body  {
+  margin: 0;
+  padding: 0;
+}
 .body {
   font-family: "Gilroy", sans-serif;
   font-weight: bold;
   font-style: normal;
   font-size: 12px;
   background: #ffffff;
-  max-width: 1445px;
-  margin: 0;
 }
-
+.img-container img {
+  max-width: 100%;
+}
 /*.wrapper  {
   font-family: "Gilroy", sans-serif;
   font-weight: bold;
@@ -44,13 +48,19 @@
   font-weight: bold;
   font-style: normal;
   max-height: 88px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #ffffff;
 }
 
 .menu {
   max-width: 945px;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 10px;
+  padding-top: 17px;
+  background-color: white;
+  padding-bottom: 16px;
 }
 
 .menu > ul {
@@ -73,16 +83,15 @@
 }
 
 .hr-line  {
-  max-width: 945px;
-  margin-right: auto;
-  margin-left: auto;
+  max-width: 940px;
+  margin: 0 auto 0 auto;
 }
 
 .main {
   font-family: "Gilroy", sans-serif;
   font-weight: bold;
   font-style: normal;
-  margin-top: 12px;
+  padding-top: 12px;
 }
 
 .info-panel {
@@ -102,6 +111,9 @@
 .name {
   text-align: left;
   font-size: 47px;
+  line-height: 58px;
+  display: flex;
+  flex-direction: column;
 }
 .info {
   font-family: "Gilroy", sans-serif;
@@ -109,12 +121,15 @@
   font-style: normal;
   text-align: left;
   font-size: 18px;
+  line-height: 22px;
   margin-top: 64px;
   margin-right: -520px;
+  display: flex;
+  flex-direction: column;
 }
 .lang-selector  {
   font-size: 16px;
-  line-height: 19px;
+  line-height: 20px;
   display: flex;
   align-self: flex-end;
   text-align: left;
@@ -133,8 +148,13 @@
 }
 
 .photo  {
-  margin: 33px auto 100px auto;
+  margin: 0 auto 0 auto;
+  padding-top: 30px;
+  padding-bottom: 100px;
   max-width: 945px;
+}
+.photo > img  {
+  max-width: 100%;
 }
 
 .about  {
@@ -143,22 +163,37 @@
   font-style: normal;
   width: 100%;
   background: #F6F6F6;
-  padding-top: 99px;
-  padding-bottom: 87px;
+  padding-top: 120px;
+  padding-bottom: 78px;
   text-align: center;
+  min-height: 338px;
 }
-.about > h1 {
+.about h1 {
   font-size: 34px;
   line-height: 42px;
+  padding-bottom: 35px;
+  margin: 0;
 }
-.about > p{
+.about p{
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 18px;
   line-height: 22px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
-.p1  {
+#about-p1-second {
+  padding-bottom: 45px;
+}
+#about-p2-second   {
+  padding-bottom: 48px;
+}
+#about-p2-first, #about-p3-first {
+  margin: 0;
+}
+/*.p1  {
   margin-top: -10px;
 }
 .p2  {
@@ -166,79 +201,88 @@
 }
 .p3 {
   margin-top: 40px;
-}
+}*/
 
 .skills {
   font-family: "Gilroy", sans-serif;
   font-weight: bold;
   font-style: normal;
-  margin-top: 90px;
   margin-right: auto;
   margin-left: auto;
   max-width: 945px;
   text-align: center;
+  padding-top: 84px;
+  padding-bottom: 110px;
 }
 .skills > h1  {
+  margin: 0;
   font-size: 34px;
   line-height: 42px;
-  margin-top: 69px;
+  padding-bottom: 69px;
 }
-.skills > p{
+/*.skills > p*/
+#skills-p  {
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 18px;
   line-height: 21px;
-  margin-top: 69px;
 }
-.programs-pics  {
+.programs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 88px;
+}
+.programs > .PS, .AI, .AAE, .Figma  {
+  width: 164px;
+}
+.programs > .img-container > img {
+  width: 90px;
+}
+.program-name {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 17px;
+  padding-top: 22px;
+}
+.program-name span  {
+  color: #828282;
+}
+.program-rating {
+  padding-top: 40px;
+}
+.program-rating > .img-container {
+  display: flex;
+  justify-content: space-between;
+}
+.programs .program-rating > .img-container > img  {
+  width: 22px;
+  height: 20px;
+}
+/*.programs-pics  {
   display: flex;
   justify-content: space-around;
   margin-left: -30px;
   margin-right: -30px;
-  margin-top: 90px;
+  padding-top: 88px;
+  padding-bottom: 22px;
 }
 .programs-name  {
   font-size: 14px;
   line-height: 17px;
-  margin-top: 8px;
   color: #828282;
+  padding-bottom: 40px;
 }
 .programs-name > ul{
   display: flex;
   padding: 0;
+  margin: 0;
 }
 .programs-name > ul > li  {
   display: flex;
-}
-.PS {
-  margin-left: 65px;
-}
-.AI {
-  margin-left: 193px;
-}
-.AAE  {
-  margin-left: 189px;
-}
-.Figma  {
-  margin-left: 184px;
-}
-.rating {
-  display: flex;
-  margin-top: 24px;
-}
-.ps-rating  {
-  margin-left: 37px;
-}
-.ai-rating  {
-  margin-left: 133px;
-}
-.aae-rating {
-  margin-left: 133px;
-}
-.figma-rating {
-  margin-left: 117px;
-}
+}*/
 
 .portfolio  {
   width: 100%;
@@ -246,21 +290,51 @@
   margin-right: auto;
   text-align: center;
   background: #F6F6F6;
-  margin-top: 110px;
-  padding-top: 82px;
-  padding-bottom: 100px;
+  padding-top: 113px;
+  padding-bottom: 27px;
 }
+/*.img-container  {
+  display: flex;
+  flex-direction: column;
+  max-width: 934px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.img-container > img  {
+  padding-bottom: 45px;
+  max-width: 100%;
+}
+.img-container > a  {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #070707;
+  padding-bottom: 100px;
+}*/
 .portfolio > h1 {
   font-size: 34px;
   line-height: 42px;
-  margin-bottom: 64px;
+  margin: 0;
+  padding-bottom: 64px;
 }
-.portfolio > img  {
+/*.portfolio > img  {
   margin-left: auto;
   margin-right: auto;
   max-width: 945px;
+  padding-bottom: 45px;
+}*/
+.portfolio > .img-container {
+  width: 936px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 99px;
 }
-.portfolio > a{
+.portfolio img  {
+  padding-bottom: 45px;
+}
+.portfolio a{
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -268,24 +342,13 @@
   line-height: 21px;
   color: #070707;
 }
-.portf-pic1  {
-  margin-bottom: 40px;
-}
-.portf-pic2 {
-  margin-top: 100px;
-  margin-bottom: 40px;
-}
-.portf-pic3 {
-  margin-top: 100px;
-  margin-bottom: 40px;
-}
 
 .footer {
+  padding-top: 84px;
   font-family: "Gilroy", sans-serif;
   font-weight: bold;
   font-style: normal;
-  margin-top: 114px;
-  padding-bottom: 123px;
+  padding-bottom: 77px;
   text-align: center;
 }
 .contacts {
@@ -296,7 +359,8 @@
 .contacts > h1  {
   font-size: 34px;
   line-height: 42px;
-  margin-bottom: 32px;
+  margin: 0;
+  padding-bottom: 33px;
 }
 .contacts > p {
   font-family: "Gilroy", sans-serif;
@@ -304,35 +368,28 @@
   font-style: normal;
   font-size: 18px;
   line-height: 21px;
-  margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 11px 0;
+  padding-bottom: 35px;
 }
-.footer-info  {
+#footer-first, #footer-second  {
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 14px;
   line-height: 17px;
 }
-
-@keyframes expand {
-  from {transform: scale(1, 1);}
-  to  {transform: scale(1.1, 1.1);}
-}
-
 .contact-pics  {
-  margin-top: 82px;
-  margin-bottom: 41px;
+  margin-top: 94px;
+  margin-bottom: 45px;
 }
-.contact-pics > a {
-  margin-left: 28px;
-  margin-right: 28px;
-}
-.contact-pics > a > img:hover {
-  animation-name: expand;
-  animation-duration: 0.2s;
-  animation-timing-function: ease-in-out;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
+.contact-pics > .img-container {
+  max-width: 342px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 @keyframes change-color {
@@ -340,7 +397,8 @@
   to  {background-color: #828282;}
 }
 
-.contacts > button  {
+.contacts > a  {
+  text-decoration-line: none;
   background-color: #070707;
   font-size: 18px;
   line-height: 22px;
@@ -350,8 +408,9 @@
   border: none;
   color: #ffffff;
   border-radius: 20px;
+  padding: 10px 20px 10px 20px;
 }
-.contacts > button:hover  {
+.contacts > a:hover  {
   animation-name: change-color;
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
