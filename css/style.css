@@ -30,6 +30,10 @@ body  {
 .img-container img {
   max-width: 100%;
 }
+/*canvas  {
+  width: 0;
+  height: 0;
+}*/
 /*.wrapper  {
   font-family: "Gilroy", sans-serif;
   font-weight: bold;
@@ -237,9 +241,9 @@ body  {
 .programs > .PS, .AI, .AAE, .Figma  {
   width: 164px;
 }
-.programs > .img-container > img {
+/*.programs > .img-container > img {
   width: 90px;
-}
+}*/
 .program-name {
   display: flex;
   flex-direction: column;

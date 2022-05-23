@@ -3,6 +3,16 @@ const SELECTOR_ENG = document.getElementById("engL");
 
 const HEADER = document.getElementsByClassName("header")[0];
 
+const PS_CANVAS = document.getElementById('PS-canvas');
+const AI_CANVAS = document.getElementById('AI-canvas');
+const AAE_CANVAS = document.getElementById('AAE-canvas');
+const FIGMA_CANVAS = document.getElementById('Figma-canvas');
+
+let psCanvas;
+let aiCanvas;
+let aaeCanvas;
+let figmaCanvas;
+
 let text;
 
 document.addEventListener("DOMContentLoaded", function changeColorAndHash(){
@@ -10,8 +20,9 @@ document.addEventListener("DOMContentLoaded", function changeColorAndHash(){
     SELECTOR_RU.style.color = "#828282";
     document.location.hash = "#eng";
 });
+document.addEventListener("DOMContentLoaded", drawSkills);
 
-fetch("https://raw.githubusercontent.com/denvolk/frontend/test-branch/json/text.json")    //Для GitHub Pages
+fetch("https://raw.githubusercontent.com/denvolk/frontend/pure-js/json/text.json")    //Для GitHub Pages
 //fetch("http://localhost:63342/frontend/json/text.json")   //Для локального использования
     .then(response => response.json())
     .then(data => text = data);
@@ -167,3 +178,185 @@ function scrollToTop()  {
     document.querySelector(".header").scrollIntoView({behavior: "smooth"});
     HEADER.style.position = "sticky";
 }
+
+function drawCanvas(img)   {
+    //let canvas = document.getElementById('PS-canvas').getContext('2d');
+    let canvas;
+    let image = new Image();
+    let w = 0;
+    let h = 0;
+
+    switch (img)    {
+        case 'PS-canv':
+            w = h = 90;
+            document.getElementById('PS-canvas').width = w; document.getElementById('PS-canvas').height = h;
+            canvas = document.getElementById('PS-canvas').getContext('2d');
+            image.src = '../pics/PS.png';
+            break;
+        case 'AI-canv':
+            w = h = 90;
+            document.getElementById('AI-canvas').width = w; document.getElementById('AI-canvas').height = h;
+            canvas = document.getElementById('AI-canvas').getContext('2d');
+            image.src = 'pics/AI.png';
+            break;
+        case 'AAE-canv':
+            w = h = 90;
+            document.getElementById('AAE-canvas').width = w; document.getElementById('AAE-canvas').height = h;
+            canvas = document.getElementById('AAE-canvas').getContext('2d');
+            image.src = 'pics/AAE.png';
+            break;
+        case 'Figma-canv':
+            w = 59; h = 90;
+            document.getElementById('Figma-canvas').width = w; document.getElementById('Figma-canvas').height = h;
+            canvas = document.getElementById('Figma-canvas').getContext('2d');
+            image.src = 'pics/Figma.png';
+            break;
+        default:
+            alert('No canvas provided!');
+    }
+
+    image.addEventListener('load', function()   {
+        canvas.drawImage(image, 0, 0, w, h);
+    });
+    //image.onload = function(){canvas.drawImage(image, 0, 0, w, h)};
+}
+
+function drawSkills()   {
+    drawCanvas('PS-canv');
+    drawCanvas('AI-canv');
+    drawCanvas('AAE-canv');
+    drawCanvas('Figma-canv');
+    //psCanvas = PS_CANVAS.getContext('2d').getImageData(0, 0, PS_CANVAS.width, PS_CANVAS.height);
+}
+
+function makeGrayScale(img)    {
+    /*let imageData = PS_CANVAS.getContext('2d').getImageData(0, 0, PS_CANVAS.width, PS_CANVAS.height);
+    let data = imageData.data;
+    psCanvas = Array.from(data);
+    changePixelData(data, 0);*/
+
+    let imageData;
+    let data;
+
+    switch (img)    {
+        case 'PS-canvas':
+            imageData = PS_CANVAS.getContext('2d').getImageData(0, 0, PS_CANVAS.width, PS_CANVAS.height);
+            data = imageData.data;
+            psCanvas = Array.from(data);
+            break;
+        case 'AI-canvas':
+            imageData = AI_CANVAS.getContext('2d').getImageData(0, 0, AI_CANVAS.width, AI_CANVAS.height);
+            data = imageData.data;
+            aiCanvas = Array.from(data);
+            break;
+        case 'AAE-canvas':
+            imageData = AAE_CANVAS.getContext('2d').getImageData(0, 0, AAE_CANVAS.width, AAE_CANVAS.height);
+            data = imageData.data;
+            aaeCanvas = Array.from(data);
+            break;
+        case 'Figma-canvas':
+            imageData = FIGMA_CANVAS.getContext('2d').getImageData(0, 0, FIGMA_CANVAS.width, FIGMA_CANVAS.height);
+            data = imageData.data;
+            figmaCanvas = Array.from(data);
+            break;
+        default:
+            alert('No canvas id provided!')
+    }
+
+    changePixelData(data, 0);
+
+    switch (img) {
+        case 'PS-canvas':
+            PS_CANVAS.getContext('2d').putImageData(imageData, 0, 0);
+            break;
+        case 'AI-canvas':
+            AI_CANVAS.getContext('2d').putImageData(imageData, 0, 0);
+            break;
+        case 'AAE-canvas':
+            AAE_CANVAS.getContext('2d').putImageData(imageData, 0, 0);
+            break;
+        case 'Figma-canvas':
+            FIGMA_CANVAS.getContext('2d').putImageData(imageData, 0, 0);
+            break;
+        default:
+            alert('No canvas id provided!')
+    }
+    //PS_CANVAS.getContext('2d').putImageData(imageData, 0, 0);
+}
+
+function returnColor(img)   {
+    /*let imageData = PS_CANVAS.getContext('2d').getImageData(0, 0, PS_CANVAS.width, PS_CANVAS.height);
+    let data = imageData.data;
+    changePixelData(data, 1, psCanvas);*/
+
+    let imageData;
+    let data;
+
+    switch (img)    {
+        case 'PS-canvas':
+            imageData = PS_CANVAS.getContext('2d').getImageData(0, 0, PS_CANVAS.width, PS_CANVAS.height);
+            data = imageData.data;
+            changePixelData(data, 1, psCanvas);
+            PS_CANVAS.getContext('2d').putImageData(imageData, 0, 0);
+            psCanvas = [];
+            break;
+        case 'AI-canvas':
+            imageData = AI_CANVAS.getContext('2d').getImageData(0, 0, AI_CANVAS.width, AI_CANVAS.height);
+            data = imageData.data;
+            changePixelData(data, 1, aiCanvas);
+            AI_CANVAS.getContext('2d').putImageData(imageData, 0, 0);
+            aiCanvas = [];
+            break;
+        case 'AAE-canvas':
+            imageData = AAE_CANVAS.getContext('2d').getImageData(0, 0, AAE_CANVAS.width, AAE_CANVAS.height);
+            data = imageData.data;
+            changePixelData(data, 1, aaeCanvas);
+            AAE_CANVAS.getContext('2d').putImageData(imageData, 0, 0);
+            aaeCanvas = [];
+            break;
+        case 'Figma-canvas':
+            imageData = FIGMA_CANVAS.getContext('2d').getImageData(0, 0, FIGMA_CANVAS.width, FIGMA_CANVAS.height);
+            data = imageData.data;
+            changePixelData(data, 1, figmaCanvas);
+            FIGMA_CANVAS.getContext('2d').putImageData(imageData, 0, 0);
+            figmaCanvas = [];
+            break;
+        default:
+            alert('No canvas id provided!');
+    }
+
+    //PS_CANVAS.getContext('2d').putImageData(imageData, 0, 0);
+    //psCanvas = [];
+}
+
+function changePixelData(data, mode, defaultData)  {
+    if (mode === 0) {
+        for (let iter = 0; iter < data.length; iter += 4)   {
+            let average = (data[iter] + data[iter + 1] + data[iter + 2]) / 3;
+
+            data[iter] = average;
+            data[iter + 1] = average;
+            data[iter + 2] = average;
+        }
+    }
+    else if (mode === 1)    {
+        for (let iter = 0; iter < data.length; iter += 4)   {
+            data[iter] = defaultData[iter];
+            data[iter + 1] = defaultData[iter + 1];
+            data[iter + 2] = defaultData[iter + 2];
+        }
+    }
+}
+
+PS_CANVAS.addEventListener('mouseover', function () {makeGrayScale('PS-canvas');});
+PS_CANVAS.addEventListener('mouseleave', function () {returnColor('PS-canvas');});
+
+AI_CANVAS.addEventListener('mouseover', function () {makeGrayScale('AI-canvas');});
+AI_CANVAS.addEventListener('mouseleave', function () {returnColor('AI-canvas');});
+
+AAE_CANVAS.addEventListener('mouseover', function () {makeGrayScale('AAE-canvas');});
+AAE_CANVAS.addEventListener('mouseleave', function () {returnColor('AAE-canvas');});
+
+FIGMA_CANVAS.addEventListener('mouseover', function () {makeGrayScale('Figma-canvas');});
+FIGMA_CANVAS.addEventListener('mouseleave', function () {returnColor('Figma-canvas');});
+//PS_CANVAS.onmouseover = makeGrayScale('PS-canv');
