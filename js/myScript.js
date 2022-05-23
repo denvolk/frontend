@@ -191,7 +191,7 @@ function drawCanvas(img)   {
             w = h = 90;
             document.getElementById('PS-canvas').width = w; document.getElementById('PS-canvas').height = h;
             canvas = document.getElementById('PS-canvas').getContext('2d');
-            image.src = '../pics/PS.png';
+            image.src = 'pics/PS.png';
             break;
         case 'AI-canv':
             w = h = 90;
