@@ -8,6 +8,17 @@ const AI_CANVAS = document.getElementById('AI-canvas');
 const AAE_CANVAS = document.getElementById('AAE-canvas');
 const FIGMA_CANVAS = document.getElementById('Figma-canvas');
 
+const MAX_SLIDES = 3;
+const PREV_BTN_1 = document.getElementById('prev-btn-1');
+const NEXT_BTN_1 = document.getElementById('next-btn-1');
+const PREV_BTN_2 = document.getElementById('prev-btn-2');
+const NEXT_BTN_2 = document.getElementById('next-btn-2');
+const PREV_BTN_3 = document.getElementById('prev-btn-3');
+const NEXT_BTN_3 = document.getElementById('next-btn-3');
+let currSlide_1 = 1;
+let currSlide_2 = 1;
+let currSlide_3 = 1;
+
 let psCanvas;
 let aiCanvas;
 let aaeCanvas;
@@ -21,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function changeColorAndHash(){
     document.location.hash = "#eng";
 });
 document.addEventListener("DOMContentLoaded", drawSkills);
+document.addEventListener("DOMContentLoaded", hideSlides);
 
 fetch("https://raw.githubusercontent.com/denvolk/frontend/pure-js/json/text.json")    //Для GitHub Pages
 //fetch("http://localhost:63342/frontend/json/text.json")   //Для локального использования
@@ -28,33 +40,6 @@ fetch("https://raw.githubusercontent.com/denvolk/frontend/pure-js/json/text.json
     .then(data => text = data);
 
 function changeLanguage(lang)   {
-    /*if (window.location.hash)   {
-        if (window.location.hash === "#ru" && lang === "ru")
-            return;
-        else if (window.location.hash === "#eng" && lang === "eng")
-            return;
-
-        window.location.hash = lang;
-    }
-    else    {
-        alert("Hash not set!");
-        window.location.hash = lang;
-        return;
-    }
-
-    if (window.location.hash === "#ru") {
-        setTextToRu();
-        SELECTOR_RU.style.color = "#070707";
-        SELECTOR_ENG.style.color = "#828282";
-        document.documentElement.setAttribute("lang", "ru");
-    }
-    else if (window.location.hash === "#eng" && lang === "eng") {
-        setTextToEng();
-        SELECTOR_RU.style.color = "#828282";
-        SELECTOR_ENG.style.color = "#070707";
-        document.documentElement.setAttribute("lang", "eng");
-    }*/
-
     if (window.location.hash) {
         if (window.location.hash === "#ru" && lang === "eng")   {
             setTextToEng();
@@ -360,3 +345,140 @@ AAE_CANVAS.addEventListener('mouseleave', function () {returnColor('AAE-canvas')
 FIGMA_CANVAS.addEventListener('mouseover', function () {makeGrayScale('Figma-canvas');});
 FIGMA_CANVAS.addEventListener('mouseleave', function () {returnColor('Figma-canvas');});
 //PS_CANVAS.onmouseover = makeGrayScale('PS-canv');
+
+function hideSlides()   {
+    document.getElementById('slide-1-2').style.display = 'none';
+    document.getElementById('slide-1-3').style.display = 'none';
+
+    document.getElementById('slide-2-2').style.display = 'none';
+    document.getElementById('slide-2-3').style.display = 'none';
+
+    document.getElementById('slide-3-2').style.display = 'none';
+    document.getElementById('slide-3-3').style.display = 'none';
+}
+
+function showSlide(slider, slide)    {
+    let x = document.getElementsByClassName('slider')[slider - 1];
+    let y = x.getElementsByClassName('slide');
+
+    switch (slide) {
+        case 1:
+            y[0].style.display = 'block';
+            y[1].style.display = y[2].style.display = 'none';
+            break;
+        case 2:
+            y[1].style.display = 'block';
+            y[0].style.display = y[2].style.display = 'none';
+            break;
+        case 3:
+            y[2].style.display = 'block';
+            y[0].style.display = y[1].style.display = 'none';
+            break;
+        default:
+            alert('No slide number was provided! show');
+    }
+}
+
+function nextImg(slide)  {
+    switch (slide)  {
+        case 1:
+            if (currSlide_1 === MAX_SLIDES)  {
+                showSlide(1, 1);
+                currSlide_1 = 1;
+            }
+            else if (currSlide_1 === 1) {
+                showSlide(1, 2);
+                currSlide_1++;
+            }
+            else if (currSlide_1 === 2) {
+                showSlide(1, 3);
+                currSlide_1++;
+            }
+            break;
+        case 2:
+            if (currSlide_2 === MAX_SLIDES)  {
+                showSlide(2, 1);
+                currSlide_2 = 1;
+            }
+            else if (currSlide_2 === 1) {
+                showSlide(2, 2);
+                currSlide_2++;
+            }
+            else if (currSlide_2 === 2) {
+                showSlide(2, 3);
+                currSlide_2++;
+            }
+            break;
+        case 3:
+            if (currSlide_3 === MAX_SLIDES)  {
+                showSlide(3, 1);
+                currSlide_3 = 1;
+            }
+            else if (currSlide_3 === 1) {
+                showSlide(3, 2);
+                currSlide_3++;
+            }
+            else if (currSlide_3 === 2) {
+                showSlide(3, 3);
+                currSlide_3++;
+            }
+            break;
+        default:
+            alert('No slide number provided! next');
+    }
+}
+function prevImg(slide) {
+    switch (slide)  {
+        case 1:
+            if (currSlide_1 === 1)  {
+                showSlide(1, 3);
+                currSlide_1 = MAX_SLIDES;
+            }
+            else if (currSlide_1 === 2) {
+                showSlide(1, 1);
+                currSlide_1--;
+            }
+            else if (currSlide_1 === 3) {
+                showSlide(1, 2);
+                currSlide_1--;
+            }
+            break;
+        case 2:
+            if (currSlide_2 === 1)  {
+                showSlide(2, 3);
+                currSlide_2 = MAX_SLIDES;
+            }
+            else if (currSlide_2 === 2) {
+                showSlide(2, 1);
+                currSlide_2--;
+            }
+            else if (currSlide_2 === 3) {
+                showSlide(2, 2);
+                currSlide_2--;
+            }
+            break;
+        case 3:
+            if (currSlide_3 === 1)  {
+                showSlide(3, 3);
+                currSlide_3 = MAX_SLIDES;
+            }
+            else if (currSlide_3 === 2) {
+                showSlide(3, 1);
+                currSlide_3--;
+            }
+            else if (currSlide_3 === 3) {
+                showSlide(3, 2);
+                currSlide_3--;
+            }
+            break;
+        default:
+            alert('No slide number provided! prev');
+    }
+}
+
+PREV_BTN_1.addEventListener('click', function () {prevImg(1);});
+NEXT_BTN_1.addEventListener('click', function () {nextImg(1);});
+PREV_BTN_2.addEventListener('click', function () {prevImg(2);});
+NEXT_BTN_2.addEventListener('click', function () {nextImg(2);});
+PREV_BTN_3.addEventListener('click', function () {prevImg(3);});
+NEXT_BTN_3.addEventListener('click', function () {nextImg(3);});
