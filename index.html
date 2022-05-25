@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css">
+  <link href="css/style.css" media="all" rel="stylesheet" type="text/css">
+  <title>Denis Novik</title>
+</head>
+<body>
+<div class="header">
+  <nav class="menu">
+    <ul>
+      <li><a href="javascript:scrollToPoint('home')"><span id="menu-home">Home</span></a></li>
+      <li><a href="javascript:scrollToPoint('about')"><span id="menu-about">About me</span></a></li>
+      <li><a href="javascript:scrollToPoint('skills')"><span id="menu-skills">Skills</span></a></li>
+      <li><a href="javascript:scrollToPoint('portfolio')"><span id="menu-portfolio">Portfolio</span></a></li>
+      <li><a href="javascript:scrollToPoint('contacts')"><span id="menu-contacts">Contacts</span></a></li>
+    </ul>
+  </nav>
+</div>
+<hr class="hr-line"/>
+<div class="main">
+  <section class="info-panel">
+    <ul>
+      <li class="name"><span id="first-name">Denis</span><span id="last-name">Novik</span></li>
+      <li class="info"><span id="info-first">UX | UI designer</span><span id="info-second">24 years old, Minsk</span></li>
+      <li class="lang-selector"><a href="javascript:changeLanguage('ru')"><span id="ruL">RU</span></a> |
+        <a href="javascript:changeLanguage('eng')"><span id="engL">ENG</span></a></li>
+    </ul>
+  </section>
+  <section class="photo">
+    <div class="img-container">
+      <img src="pics/Photo.png" alt="Denis Novik">
+    </div>
+  </section>
+  <section class="about">
+    <h1><span id="about-h">About me</span></h1>
+    <p>
+      <span id="about-p1-first">Hi, I'm Denis – UX | UI designer from Minsk.</span>
+      <span id="about-p1-second">I'm interested in design and everything connected with it.</span>
+    </p>
+    <p>
+      <span id="about-p2-first">I'm studying at courses "Web and mobile design</span>
+      <span id="about-p2-second">interfaces" in IT-Academy.</span>
+    </p>
+    <p>
+      <span id="about-p3-first">Ready to implement excellent projects</span>
+      <span id="about-p3-second">with wonderful people.</span>
+    </p>
+  </section>
+  <section class="skills">
+    <h1><span id="skills-h">Skills</span></h1>
+    <span id="skills-p">I work in such programs as</span>
+    <div class="programs">
+      <div class="PS">
+        <div class="img-container">
+          <img src="pics/PS.png" alt="Adobe Photoshop">
+        </div>
+        <div class="program-name">
+          <span id="PS-name=one">Adobe</span>
+          <span id="PS-name-two">Photoshop</span>
+        </div>
+        <div class="program-rating">
+          <div class="img-container">
+            <img src="pics/Star_bl.svg" alt="black star">
+            <img src="pics/Star_bl.svg" alt="black star">
+            <img src="pics/Star_bl.svg" alt="black star">
+            <img src="pics/Star_bl.svg" alt="black star">
+            <img src="pics/Star_wh.svg" alt="white star">
+          </div>
+        </div>
+      </div>
+      <div class="AI">
+        <div class="img-container">
+          <img src="pics/AI.png" alt="Adobe Illustrator">
+        </div>
+        <div class="program-name">
+          <span id="AI-name=one">Adobe</span>
+          <span id="AI-name-two">Illustrator</span>
+        </div>
+        <div class="program-rating">
+          <div class="img-container">
+            <img src="pics/Star_bl.svg" alt="black star">
+            <img src="pics/Star_bl.svg" alt="black star">
+            <img src="pics/Star_bl.svg" alt="black star">
+            <img src="pics/Star_wh.svg" alt="white star">
+            <img src="pics/Star_wh.svg" alt="white star">
+          </div>
+        </div>
+      </div>
+      <div class="AAE">
+        <div class="img-container">
+          <img src="pics/AAE.png" alt="Adobe After Effects">
+        </div>
+        <div class="program-name">
+          <span id="AAE-name=one">Adobe</span>
+          <span id="AAE-name-two">After Effects</span>
+        </div>
+        <div class="program-rating">
+          <div class="img-container">
+            <img src="pics/Star_bl.svg" alt="black star">
+            <img src="pics/Star_bl.svg" alt="black star">
+            <img src="pics/Star_bl.svg" alt="black star">
+            <img src="pics/Star_bl.svg" alt="black star">
+            <img src="pics/Star_wh.svg" alt="white star">
+          </div>
+        </div>
+      </div>
+      <div class="Figma">
+        <div class="img-container">
+          <img src="pics/Figma.png" alt="Figma">
+        </div>
+        <div class="program-name">
+          <span id="Figma-name=one">Figma</span>
+          <span id="Figma-name-two" style="visibility: hidden">Empty</span>
+        </div>
+        <div class="program-rating">
+          <div class="img-container">
+            <img src="pics/Star_bl.svg" alt="black star">
+            <img src="pics/Star_bl.svg" alt="black star">
+            <img src="pics/Star_bl.svg" alt="black star">
+            <img src="pics/Star_bl.svg" alt="black star">
+            <img src="pics/Star_wh.svg" alt="white star">
+          </div>
+        </div>
+      </div>
+      <!--<div class="programs-pics">
+        <img src="pics/PS.png" alt="Adobe Photoshop">
+        <img src="pics/AI.png" alt="Adobe Illustrator">
+        <img src="pics/AAE.png" alt="Adobe After Effects">
+        <img src="pics/Figma.png" alt="Figma">
+      </div>
+      <div class="programs-name">
+        <ul>
+          <li class="PS">Adobe<br>Photoshop</li>
+          <li class="AI">Adobe<br>Illustrator</li>
+          <li class="AAE">Adobe<br>After Effects</li>
+          <li class="Figma">Figma</li>
+        </ul>
+      </div>
+      <div class="rating">
+        <div class="ps-rating">
+          <img src="pics/Star_bl.png" alt="black star">
+          <img src="pics/Star_bl.png" alt="black star">
+          <img src="pics/Star_bl.png" alt="black star">
+          <img src="pics/Star_bl.png" alt="black star">
+          <img src="pics/Star_wh.png" alt="white star">
+        </div>
+        <div class="ai-rating">
+          <img src="pics/Star_bl.png" alt="black star">
+          <img src="pics/Star_bl.png" alt="black star">
+          <img src="pics/Star_bl.png" alt="black star">
+          <img src="pics/Star_wh.png" alt="white star">
+          <img src="pics/Star_wh.png" alt="white star">
+        </div>
+        <div class="aae-rating">
+          <img src="pics/Star_bl.png" alt="black star">
+          <img src="pics/Star_bl.png" alt="black star">
+          <img src="pics/Star_bl.png" alt="black star">
+          <img src="pics/Star_bl.png" alt="black star">
+          <img src="pics/Star_wh.png" alt="white star">
+        </div>
+        <div class="figma-rating">
+          <img src="pics/Star_bl.png" alt="black star">
+          <img src="pics/Star_bl.png" alt="black star">
+          <img src="pics/Star_bl.png" alt="black star">
+          <img src="pics/Star_bl.png" alt="black star">
+          <img src="pics/Star_wh.png" alt="white star">
+        </div>
+      </div>-->
+    </div>
+  </section>
+  <section class="portfolio">
+    <h1><span id="portfolio-h">Portfolio</span></h1>
+    <div class="img-container">
+      <img class="portf-pic1" src="pics/Portfolio1.png" alt="Portfolio1">
+      <a href="javascript:window.alert('Site not ready')">Online fashion store - Homepage</a>
+    </div>
+    <div class="img-container">
+      <img class="portf-pic2" src="pics/Portfolio2.png" alt="Portfolio2">
+      <a id="rb-store" href="javascript:window.alert('Site not ready')">Reebok Store - Concept</a>
+    </div>
+    <div class="img-container">
+      <img class="portf-pic3" src="pics/Portfolio3.png" alt="Portfolio3">
+      <a href="javascript:window.alert('Site not ready')">Braun Landing Page - Concept</a>
+    </div>
+  </section>
+</div>
+<div class="footer">
+  <section class="contacts">
+    <h1><span id="contacts-h">Contacts</span></h1>
+    <p><span id="contacts-p-first">Want to know more or just chat?</span>
+      <span id="contacts-p-second">You are welcome!</span>
+    </p>
+    <!--<button>Send message</button>-->
+    <a href="mailto:denvolk242@gmail.com?subject=Mail%20denvolk"><span id="button">Send message</span></a>
+    <div class="contact-pics">
+      <div class="img-container">
+        <a href=""><img src="pics/LinkedIn.svg" alt="LinkedIn"></a>
+        <a href=""><img src="pics/Instagram.svg" alt="Instagram"></a>
+        <a href=""><img src="pics/Behance.svg" alt="Behance"></a>
+        <a href=""><img src="pics/Dribble.svg" alt="Dribble"></a>
+      </div>
+    </div>
+    <p>
+      <span id="footer-first">Like me on</span>
+      <span id="footer-second">LinkedIn, Instagram, Behance, Dribble</span>
+    </p>
+  </section>
+</div>
+<!--<script type="text/javascript" src="js/variables.js"></script>-->
+<script defer type="text/javascript" src="js/myScript.js"></script>
+</body>
+</html>

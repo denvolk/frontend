@@ -1,0 +1,39 @@
+//main: ../style.less
+
+.font-face(@font-family, @font-path, @font, @font-weight, @font-style) {
+
+  @font-face  {
+    font-family: @font-family, sans-serif;
+
+    src: url("@{font-path}@{font}.eot"),
+    url("@{font-path}@{font}.woff") format("woff"),
+    url("@{font-path}@{font}.ttf") format("truetype");
+
+    font-weight: @font-weight;
+    font-style: @font-style;
+  }
+}
+.font-face("Gilroy", "../fonts/", "Gilroy-Medium", 500, normal);
+.font-face("Gilroy", "../fonts/", "Gilroy-Bold", bold, normal);
+
+.font-normal() {
+  font-family: "Gilroy", sans-serif;
+  font-weight: @normal;
+  font-style: normal;
+}
+.font-bold() {
+  font-family: "Gilroy", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+.font-size-18() {
+  font-size: 18px;
+  line-height: 22px;
+}
+.font-size(@f-size, @l-height)  {
+  font-size: @f-size;
+  line-height: @l-height;
+}
+
+
+@import "../style";
