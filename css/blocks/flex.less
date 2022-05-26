@@ -1,0 +1,19 @@
+//main: ../style.less
+
+.flex-between()  {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-column()  {
+  display: flex;
+  flex-direction: column;
+}
+.flex(@direction, @justify) {
+  display: flex;
+}
+.flex(@direction, @justify) when (@direction = "column")  {
+  flex-direction: column;
+}
+.flex(@direction, @justify) when (@justify = "between") {
+  justify-content: space-between;
+}
